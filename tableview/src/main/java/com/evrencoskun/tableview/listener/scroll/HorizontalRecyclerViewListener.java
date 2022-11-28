@@ -228,6 +228,12 @@ public class HorizontalRecyclerViewListener extends RecyclerView.OnScrollListene
             boolean isNeeded = mLastTouchedRecyclerView != mColumnHeaderRecyclerView;
             mVerticalRecyclerViewListener.removeLastTouchedRecyclerViewScrollListener(isNeeded);
         }
+
+        if(newState == RecyclerView.SCROLL_STATE_DRAGGING){
+
+            mIsMoved = true;
+
+        }
     }
 
     private int getIndex(@NonNull RecyclerView rv) {
