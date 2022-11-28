@@ -228,6 +228,10 @@ public class HorizontalRecyclerViewListener extends RecyclerView.OnScrollListene
             boolean isNeeded = mLastTouchedRecyclerView != mColumnHeaderRecyclerView;
             mVerticalRecyclerViewListener.removeLastTouchedRecyclerViewScrollListener(isNeeded);
         }
+        //added by Taylor 20221128 to fix the issue of horizontal scroll moving to start or end of grid
+        if(newState == RecyclerView.SCROLL_STATE_DRAGGING){
+            mIsMoved = true;
+        }
     }
 
     private int getIndex(@NonNull RecyclerView rv) {
