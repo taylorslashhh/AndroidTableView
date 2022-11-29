@@ -75,7 +75,7 @@ public class CellLayoutManager extends LinearLayoutManager {
         this.mTableView = tableView;
         this.mColumnHeaderLayoutManager = tableView.getColumnHeaderLayoutManager();
         this.mRowHeaderRecyclerView = tableView.getRowHeaderRecyclerView();
-        this.setAutoMeasureEnabled(false);
+        setAutoMeasureEnabled(false);
         initialize();
     }
 

@@ -367,6 +367,7 @@ public class TableView extends FrameLayout implements ITableView {
 
         //prevent scrolling issue
         recyclerView.setHasFixedSize(true);
+        recyclerView.setItemAnimator(null);
 
         // Disable multitouch
         recyclerView.setMotionEventSplittingEnabled(false);
